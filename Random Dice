@@ -1,0 +1,48 @@
+import random
+import math
+
+i=1
+y=math.ceil(6*random.random())
+
+x=int(input("Guess the number between 1 and 6!"))
+
+while (x>6):
+    if (x>6):
+        x = int(input("Don't try to trick me. I said between 1 and 6! Come on, give me something valid now..."))
+        continue
+    else:
+        break
+
+while (x!=y):
+
+    if (x==y):
+        break
+    if (x > 6):
+        x = int(input("You're trying to trick me again.. I said between 1 and 6! Come on, give me another one."))
+        i = 1 + i
+        continue
+    if (x<y):
+        x = int(input("You guessed wrong! Try again. Chose another number between 1 and 6! HINT: It is greater."))
+        i = 1 + i
+        continue
+    if (x>y):
+        x = int(input("You guessed wrong! Try again. Chose another number between 1 and 6! HINT: It is smaller."))
+        i = 1 + i
+        continue
+
+    else:
+        i = 1 + i
+        continue
+
+if (i==1):
+    print("Congratulations, you guessed the number in only ONE attempt! It was indeed", y,"!")
+if (i>1):
+    print("Congratulations, you guessed the number in",i,"attempts! It was indeed", y, "!")
+if (i>5):
+    print("Even thought you needed", i, "attempts to find the answer, you made it... Woah.. Bravo, I guess... It was indeed", y, "...")
+
+
+
+
+
+
