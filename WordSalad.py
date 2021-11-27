@@ -3,6 +3,7 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import time
+import os
 
 correct = 0
 cycle_nb=1
@@ -720,8 +721,10 @@ while mode_selection == "5":
     else:
         break
 
-
+os.remove("collage.jpg")
 print("Total of ", correct_answer, "correct answers over a total of ", correct_answer+wrong_answer, " questions. That corresponds to ", round(correct_answer/(correct_answer+wrong_answer)*100,1), "% of correct answers!")
+
+
 
 #Extras:
 #1/ Challenge mode // stats at the end //
