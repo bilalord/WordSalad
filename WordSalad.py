@@ -721,7 +721,6 @@ while mode_selection == "5":
         break
 
 
-print("hi asshole you reached the end")
 print("Total of ", correct_answer, "correct answers over a total of ", correct_answer+wrong_answer, " questions. That corresponds to ", round(correct_answer/(correct_answer+wrong_answer)*100,1), "% of correct answers!")
 
 #Extras:
